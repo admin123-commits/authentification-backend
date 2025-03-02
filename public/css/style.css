@@ -1,0 +1,37 @@
+/* 🌙 Mode Sombre & Clair */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #fff;
+    --primary-color: #1e90ff;
+    --secondary-color: #0a66c2;
+}
+
+/* ✨ Styles Globaux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* 📌 Conteneur Principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: var
+ }
