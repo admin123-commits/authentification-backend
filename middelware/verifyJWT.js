@@ -13,6 +13,7 @@ const verifyJWT = (req, res, next) => {
   const token = authHeader.split(" ")[1];
 
   // Vérifier et décoder le token
+  // eslint-disable-next-line no-undef
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
     if (err) {
       return res.status(403).json({ message: "Forbidden" }); // Token invalide ou expiré
