@@ -35,7 +35,7 @@ const register = async (req, res) => {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: 15 }
+      { expiresIn: '15m' }
     );
 
     const refreshToken = jwt.sign(
@@ -45,7 +45,7 @@ const register = async (req, res) => {
         },
       },
       process.env.REFRESH_TOKEN_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: '7d'}
     );
 
     // Stockage du refreshToken dans un cookie sécurisé
@@ -96,7 +96,7 @@ const login = async (req, res) => {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: 15 }
+      { expiresIn: '15m' }
     );
 
     const refreshToken = jwt.sign(
@@ -106,7 +106,7 @@ const login = async (req, res) => {
         },
       },
       process.env.REFRESH_TOKEN_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: '7d' }
     );
 
     // Stockage du refreshToken dans un cookie sécurisé
@@ -144,7 +144,7 @@ const refresh = async (req, res) =>{
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: 15 }
+      { expiresIn: '15m' }
     );
     res.json({ accessToken });
    }
